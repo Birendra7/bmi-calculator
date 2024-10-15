@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+        <div class="calculator-section">
+            <div class="input-section">
+                <label for="age">Age:</label>
+                <input type="number" id="age" placeholder="Enter your age" required>
+
+                <label>Gender:</label>
+                <div class="gender-selection">
+                    <input type="radio" id="male" name="gender" value="Male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label for="female">Female</label>
+                </div>
+
+                <label for="height-feet">Height:</label>
+                <div class="height-inputs">
+                    <input type="number" id="height-feet" placeholder="Feet" required>
+                    <input type="number" id="height-inches" placeholder="Inches" required>
+                </div>
+
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" placeholder="Enter your weight" required>
+
+                <button onclick="calculateBMI()">Calculate BMI</button>
+                <div id="result"></div>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h2>BMI Information</h2>
+            <p>The Body Mass Index (BMI) is a measure that uses your height and weight to estimate if you're underweight, normal weight, overweight, or obese. It is widely used as a general indicator of whether a person has a healthy body weight for a given height.</p>
+
+            <h3>BMI Categories</h3>
+            <table>
+                <tr>
+                    <th>Category</th>
+                    <th>BMI Range (kg/m<sup>2</sup>)</th>
+                </tr>
+                <tr><td>Severe Thinness</td><td>&lt; 16</td></tr>
+                <tr><td>Moderate Thinness</td><td>16 - 17</td></tr>
+                <tr><td>Mild Thinness</td><td>17 - 18.5</td></tr>
+                <tr><td>Normal</td><td>18.5 - 24.9</td></tr>
+                <tr><td>Overweight</td><td>25 - 29.9</td></tr>
+                <tr><td>Obese Class I</td><td>30 - 34.9</td></tr>
+                <tr><td>Obese Class II</td><td>35 - 39.9</td></tr>
+                <tr><td>Obese Class III</td><td>&gt; 40</td></tr>
+            </table>
+
+            <h3>Additional Information</h3>
+            <ul>
+                <li><strong>BMI Prime:</strong> Ratio of your BMI to the upper limit of the normal BMI range (24.9).</li>
+                <li><strong>Ponderal Index:</strong> A measure of leanness that adjusts for height, used to assess health risk.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
